@@ -13,30 +13,28 @@ const os = require("os");
 
 const cpus = os.cpus();
 
-const performanceData = () => {
-  return new Promise(async (resolve, reject) => {
-    const osType = os.type() === "Darwin" ? "Mac" : os.type();
-    const uptime = os.uptime();
-    const freeMem = os.freemem();
-    const totalMem = os.totalmem();
-    const usedMem = totalMem - freeMem;
-    const memUsage = Math.floor((usedMem / totalMem) * 100) / 100;
-    const cpuModel = cpus[0].model;
-    const cpuSpeed = cpus[0].speed;
-    const numCpus = cpus.length;
-    const cpuLoad = await getCpuLoad();
-    resolve({
-      freeMem,
-      totalMem,
-      memUsage,
-      osType,
-      uptime,
-      cpuModel,
-      cpuSpeed,
-      numCpus,
-      cpuLoad,
-    });
-  });
+const performanceData = async () => {
+  const osType = os.type() === "Darwin" ? "Mac" : os.type();
+  const uptime = os.uptime();
+  const freeMem = os.freemem();
+  const totalMem = os.totalmem();
+  const usedMem = totalMem - freeMem;
+  const memUsage = Math.floor((usedMem / totalMem) * 100) / 100;
+  const cpuModel = cpus[0].model;
+  const cpuSpeed = cpus[0].speed;
+  const numCpus = cpus.length;
+  const cpuLoad = await getCpuLoad();
+  return {
+    freeMem,
+    totalMem,
+    memUsage,
+    osType,
+    uptime,
+    cpuModel,
+    cpuSpeed,
+    numCpus,
+    cpuLoad,
+  };
 };
 
 const cpuAverage = () => {
