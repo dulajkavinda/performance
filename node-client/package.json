@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +12,8 @@
   "dependencies": {
     "farmhash": "^3.2.1",
     "socket.io-client": "^4.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
   }
 }

@@ -1,5 +1,5 @@
 const socket_main = (io, socket) => {
-  console.log("someone called me!");
+  console.log("a socket connected " + socket.id);
 };
 
 module.exports = socket_main;

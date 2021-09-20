@@ -10,6 +10,12 @@
  */
 
 const os = require("os");
+const io = require("socket.io-client");
+const socket = io("http://localhost:8181");
+
+socket.on("connect", () => {
+  console.log("connected to socket server!");
+});
 
 const cpus = os.cpus();
 

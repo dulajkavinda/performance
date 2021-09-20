@@ -85,7 +85,7 @@ if (cluster.isMaster) {
   // on connection, send the socket over to our module with socket stuff
   io.on("connection", function (socket) {
     socket_main(io, socket);
-    // console.log(`connected to worker: ${cluster.worker.id}`);
+    console.log(`connected to worker: ${cluster.worker.id}`);
   });
 
   // Listen to messages sent from the master. Ignore everything else.
