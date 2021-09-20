@@ -14,7 +14,20 @@ const io = require("socket.io-client");
 const socket = io("http://localhost:8181");
 
 socket.on("connect", () => {
-  console.log("connected to socket server!");
+  const netT = os.networkInterfaces();
+  let macA;
+  for (let key in netT) {
+    if (!netT[key][0].internal) {
+      macA = netT[key][0].mac;
+      break;
+    }
+  }
+
+  let perfDataInterval = setInterval(() => {
+    performanceData().then((allPerformanceData) => {
+      socket.emit("perfData", allPerformanceData);
+    });
+  }, 1000);
 });
 
 const cpus = os.cpus();
@@ -75,7 +88,3 @@ const getCpuLoad = () => {
     }, 100);
   });
 };
-
-performanceData().then((allPerformanceData) => {
-  console.log(allPerformanceData);
-});
