@@ -30,6 +30,10 @@ socket.on("connect", () => {
       socket.emit("perfData", allPerformanceData);
     });
   }, 1000);
+
+  socket.on("disconnect", () => {
+    clearInterval(perfDataInterval);
+  });
 });
 
 const cpus = os.cpus();
