@@ -17,6 +17,7 @@ socket.on("connect", () => {
   const netT = os.networkInterfaces();
   let macA;
   for (let key in netT) {
+    macA = Math.floor(Math.random() * 3) + 1;
     if (!netT[key][0].internal) {
       macA = netT[key][0].mac;
       break;
