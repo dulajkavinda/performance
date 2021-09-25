@@ -5,11 +5,12 @@ const Machine = require("./models/Machine");
 const socket_main = (io, socket) => {
   let macA;
 
-  socket.on("cleintAuth", (key) => {
+  socket.on("clientAuth", (key) => {
     if (key === "IHbjhkBbbbhHbJh") {
       socket.join("clients");
     } else if (key === "IHbjhkBbbbhHbJhd") {
       socket.join("ui");
+      console.log("react client joined");
     } else {
       socket.disconnect(true);
     }
@@ -22,7 +23,7 @@ const socket_main = (io, socket) => {
   });
 
   socket.on("perfData", (data) => {
-    //console.log(data);
+    io.to("ui").emit("data", data);
   });
 };
 
