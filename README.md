@@ -5,7 +5,7 @@
 PERFMonitor is a web application that shows you performance and problems of one or more server instances in near realtime. [socket.io](http://socket.io) is used for realtime data streaming and dashboard is built using react. PERFMonitor uses redis adapter to handle connection in socket.io and it also uses mongodb to store data.
 
 <p align="center">
-  <img width="50%" src="docs/demo.gif" alt="animated" />
+  <img width="100%" src="docs/demo.gif" alt="animated" />
 </p>
 
 ### Stack
@@ -21,7 +21,7 @@ PERFMonitor is a web application that shows you performance and problems of one 
 several node clients can be installed in multiple servers and they can communicate with out [socket.io](http://socket.io) server. these node clients essentially send their servers performance data as an object. to make this project scalable in the socket server I used node cluster module to distribute requests coming from individual node client. and I've used redis adapter as an a in memory database to handle any issues when using cluster module and socket together. finally socket server will send data in 1 second intervals to out react frontend making this near realtime performance monitoring system.
 
 <p align="center">
-  <img width="50%" src="docs/diagram.png" alt="animated" />
+  <img width="100%" src="docs/diagram.png" alt="animated" />
 </p>
 
 ## Setting Up
@@ -77,7 +77,7 @@ mongoose.connect("mongodb://127.0.0.1/perfData", { useNewUrlParser: true });
 
 ```jsx
 https://github.com/dulajkavinda/performance.git
-cd client 
+cd client
 
 yarn install
 yarn start
