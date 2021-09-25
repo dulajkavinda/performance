@@ -18,7 +18,7 @@ PERFMonitor is a web application that shows you performance and problems of one 
 
 ### Architecture
 
-several node clients can be installed in multiple servers and they can communicate with out [socket.io](http://socket.io) server. these node clients essentially send their servers performance data as an object. to make this project scalable in the socket server I used node cluster module to distribute requests coming from individual node client. and I've used redis adapter as an a in memory database to handle any issues when using cluster module and socket together. finally socket server will send data in 1 second intervals to out react frontend making this near realtime performance monitoring system.
+several node clients can be installed in multiple servers and they can communicate with out [socket.io](http://socket.io) server. these node clients essentially send their servers performance data as an object. to make this project scalable in the socket server I used node cluster module to distribute requests coming from individual node client. and I've used redis adapter as an a in memory database to handle any issues when using cluster module and socket together. finally socket server will send data in 1 second intervals to react frontend making this a near realtime performance monitoring system.
 
 <p align="center">
   <img width="100%" src="docs/diagram.png" alt="animated" />
