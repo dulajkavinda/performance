@@ -12,6 +12,7 @@ const Machine = new Schema({
   cpuModel: String,
   cpuSpeed: Number,
   numCpus: Number,
+  usedMem: Number,
 });
 
 module.exports = mongoose.model("Machine", Machine);

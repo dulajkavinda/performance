@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  padding: 50px;
 }
 
 .App-logo {
@@ -35,4 +36,113 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.cpu_main {
+  display: flex;
+  width: 600px;
+  height: 400px;
+
+  border-radius: 40px;
+
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(95, 87, 209, 1) 0%,
+    rgba(77, 97, 213, 1) 50%
+  );
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.cpu_circle {
+  width: 200px;
+  height: 200px;
+}
+
+.cpu_wrapper {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  margin-right: 80px;
+  margin-left: 80px;
+
+  width: 100%;
+}
+
+.cpu_wrapper_main {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.cpu_data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 200px;
+  height: 200px;
+}
+
+.cpu_data_perc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 85px;
+  height: 100px;
+}
+
+.cpu_data_perc > .cpu_data_num {
+  font-size: 3em;
+  color: white;
+}
+.cpu_data_perc > .cpu_data_num_per {
+  font-size: 1.8em;
+  font-weight: 800;
+  color: white;
+}
+
+.cpu_data_info {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  width: 200px;
+  height: 100px;
+}
+
+.cpu_data_cpus {
+  display: flex;
+  width: 200px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cpu_data_label {
+  font-size: 1em;
+  color: rgb(233, 231, 231);
+  font-weight: bolder;
+}
+
+.cpu_data_data {
+  font-size: 1em;
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+}
+
+.cpu_data_model {
+  font-size: 0.8em;
+  color: rgb(255, 255, 255);
+  font-weight: 200;
+
+  margin-top: 20px;
 }
