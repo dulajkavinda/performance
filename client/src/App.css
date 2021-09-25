@@ -146,3 +146,211 @@
 
   margin-top: 20px;
 }
+
+/* Memory */
+
+.memory_main {
+  display: flex;
+  width: 300px;
+  height: 400px;
+
+  border-radius: 40px;
+
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(233, 142, 94, 1) 0%,
+    rgba(238, 176, 55, 1) 100%
+  );
+}
+
+.mem_circle {
+  width: 150px;
+  height: 150px;
+}
+
+.mem_wrapper {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.mem_wrapper_main {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.mem_data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 200px;
+  height: 200px;
+}
+
+.cpu_data_perc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 85px;
+  height: 100px;
+}
+
+.cpu_data_perc > .cpu_data_num {
+  font-size: 3em;
+  color: white;
+}
+.cpu_data_perc > .cpu_data_num_per {
+  font-size: 1.8em;
+  font-weight: 800;
+  color: white;
+}
+
+.cpu_data_info {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  width: 200px;
+  height: 100px;
+}
+
+.cpu_data_cpus {
+  display: flex;
+  width: 200px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cpu_data_label {
+  font-size: 1em;
+  color: rgb(233, 231, 231);
+  font-weight: bolder;
+}
+
+.cpu_data_data {
+  font-size: 1em;
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+}
+
+.cpu_data_model {
+  font-size: 0.8em;
+  color: rgb(255, 255, 255);
+  font-weight: 200;
+
+  margin-top: 20px;
+}
+
+.widget_main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.mem_circle {
+  margin-top: 10px;
+  font-size: 1em;
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+}
+
+/* Info */
+
+.info_main {
+  display: flex;
+  width: 300px;
+  height: 400px;
+
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.os {
+  display: flex;
+  width: 300px;
+  height: 45%;
+
+  border-radius: 40px;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(219, 102, 105, 1) 0%,
+    rgba(233, 142, 94, 1) 100%
+  );
+}
+
+.os > span {
+  font-size: 1.2em;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.time_online > span {
+  font-size: 1.2em;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.time_online {
+  display: flex;
+  width: 300px;
+  height: 45%;
+
+  border-radius: 40px;
+
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(55, 238, 58, 1) 0%,
+    rgba(159, 224, 100, 1) 100%
+  );
+}
+
+.logo_image {
+  border-radius: 50%;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px #d2774a, 0px 1px 10px;
+}
+
+#time {
+  font-size: 1.7em;
+  font-weight: 800;
+  color: rgb(99, 164, 34);
+  margin-bottom: 10px;
+}
+#os_name {
+  font-size: 1.7em;
+  font-weight: 800;
+  color: rgb(113, 65, 62);
+  margin-bottom: 10px;
+}
