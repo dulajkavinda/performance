@@ -23,7 +23,16 @@ function App() {
     });
   }, [performanceData]);
 
-  return <div className="App">{widgets}</div>;
+  return (
+    <div className="App">
+      <img
+        style={{ width: 200, marginTop: -5, opacity: 1 }}
+        src="./logo.png"
+        alt="logo"
+      />
+      {widgets}
+    </div>
+  );
 }
 
 export default App;

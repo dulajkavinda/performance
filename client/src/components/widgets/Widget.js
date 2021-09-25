@@ -23,22 +23,33 @@ export default function Widget(props) {
     cpuLoad,
     usedMem,
     isActive,
+    macA,
   } = performanceData;
 
   const mem = { freeMem, totalMem, memUsage, usedMem };
-  const info = { osType, uptime, cpuModel, cpuSpeed, numCpus };
+  const info = { osType, uptime, cpuModel, cpuSpeed, numCpus, isActive, macA };
   const cpu = { cpuLoad, numCpus, cpuSpeed, cpuModel };
   let notActiveDiv = "";
 
-  if (!isActive) {
-    notActiveDiv = <div>Offline</div>;
-  }
+  // if (!isActive) {
+  //   return null;
+  // }
 
   return (
     <div className="widget_main">
-      <Cpu cpuData={cpu} />
-      <Memory memData={mem} />
-      <Info infoData={info} />
+      {/* <h3>
+        PC ID: {macA} -{" "}
+        {!isActive ? (
+          <span style={{ color: "red" }}>Offline</span>
+        ) : (
+          <span style={{ color: "green" }}>Online</span>
+        )}
+      </h3> */}
+      <div className="widget_wrapper">
+        <Cpu cpuData={cpu} />
+        <Memory memData={mem} />
+        <Info infoData={info} />
+      </div>
     </div>
   );
 }
